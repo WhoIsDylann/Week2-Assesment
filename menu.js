@@ -30,7 +30,14 @@
     'kids'
 */
 
-//CODE HERE
+pizza = {
+    name: 'Pepperoni Pizza' ,
+    price: 10 ,
+    category: 'Entree' ,
+    popularity: 2 , 
+    rating: 4 ,
+    tags: [ 'gluten free option' , 'customizable' ]
+}
 
 
 
@@ -42,7 +49,7 @@
     Use dot notation to access the value.
 */
 
-//CODE HERE
+console.log(pizza.popularity)
 
 
 /*
@@ -52,7 +59,7 @@
     get the value.
 */
 
-//CODE HERE
+console.log(pizza.tags[1]);
 
 
 /*
@@ -62,7 +69,12 @@
     Print the value of your new price variable.
 */
 
-//CODE HERE
+let {price} = pizza
+
+console.log(`${price}`)
+
+
+
 
 
 /*
@@ -72,7 +84,9 @@
     Print the value of your category variable. 
 */
 
-//CODE HERE
+let {category} = pizza 
+
+console.log(`${category}`)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -86,8 +100,60 @@
     tags. That way, you'll be able to use this
     data in some functions that you'll write.
 */
+const foodArr = [ {
 
-//CODE HERE
+ name: 'Chicken Pesto Pasta' ,
+price: 11 ,
+category: 'Entree' ,
+popularity: 4 , 
+rating: 5 ,
+tags: [ 'pasta' , 'chicken' ]
+    
+}, 
+
+{
+name: 'Garlic Knots' ,
+price: 5 ,
+category: 'Appetizer' ,
+popularity: 6 , 
+rating: 3 ,
+tags: [ 'garlic' , 'bread' ]
+    
+}, 
+    
+{
+
+name: 'Spaghetti w/ meatballs' ,
+price: 9 ,
+category: 'Entree' ,
+popularity: 3 , 
+rating: 4 ,
+tags: [ 'noodles' , 'tomato sauce' ]
+    
+}, 
+
+{
+
+name: 'Italian style sub' ,
+price: 7 ,
+category: 'Entree' ,
+popularity: 5 , 
+rating: 3 ,
+tags: [ 'gluten free option' , 'subs' ]
+
+},
+
+{
+
+name: 'Speciality buffalo chicken pizza' ,
+price: 10 ,
+category: 'Entree' ,
+popularity: 8 , 
+rating: 4 ,
+tags: [ 'gluten free option' , 'spicy' ]
+
+}
+    ]
 
 
 
@@ -103,10 +169,9 @@
     your food objects has.
 */
 
-//CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
+ const filteredFood = foodArr.filter( (food_tags) => food_tags.tags.includes ('spicy') )
+console.log (filteredFood)
 
 
 //////////////////PROBLEM 5////////////////////
@@ -148,7 +213,7 @@
     Return the filtered array from the entire function
 */
 
-//CODE HERE
+filterByProperty
 
 
 /*

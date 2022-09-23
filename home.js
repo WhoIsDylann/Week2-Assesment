@@ -21,10 +21,11 @@
     'Welcome back, Andrew'
 */
 
-//CODE HERE
+greetUser = username => {
+    return ("Welcome back, " + username )
+}
 
-
-
+// console.log(Greetuser("Dylan"))
 
 
 //////////////////PROBLEM 2////////////////////
@@ -49,9 +50,14 @@
 
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
-//CODE HERE
+canWeDeliver = zipcode => {
+    if (deliveryAreaZipCodes.includes(zipcode)) {
+        return "You're in the pizza zone."
+    }
+    else return "You're not in the pizza zone, sorry."
+}
 
-
+ // console.log(canWeDeliver(85201))
 
 /* 
     Problem 2 Continued
@@ -70,8 +76,15 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
     Name your new function `canWeDeliverTwo`.
 */
 
-// CODE HERE
+canWeDeliverTwo = zipcode => {
+    for (let i = 0; i < deliveryAreaZipCodes.length; i++)
+    if (zipcode === deliveryAreaZipCodes[i] ) {
+        return "You're in the pizza zone."
+    }
+    else return "You're not in the pizza zone, sorry."
+}
 
+// console.log(canWeDeliverTwo(85201))
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -105,9 +118,6 @@ const deals = [
     to be itself, but use the `replace` method
     to replace the 15 with a 10.
 */
-
-//CODE HERE
-
 
 
 /*
