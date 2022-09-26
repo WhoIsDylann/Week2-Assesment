@@ -213,8 +213,24 @@ console.log (filteredFood)
     Return the filtered array from the entire function
 */
 
-filterByProperty
+// price is below 10 dollars
+// pizzaObj.property < number
+//if type is above filter our array and check if greater than number 
 
+let filterByProperty = (property,num,type) => {
+    
+    let filteredArray = [];
+    
+    if (type === "above") {
+        filteredArray = foodArr.filter ( (pizzaobj) => pizzaobj [property] > num)
+    }
+
+    else {
+        filteredArray = foodArr.filter ( (pizzaobj) => pizzaobj [property] < num)
+    }
+
+    return filteredArray;
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -223,4 +239,4 @@ filterByProperty
     You'll have to console.log to see the filtered array
 */
 
-//CODE HERE
+console.log(filterByProperty("price", 10, "above"))

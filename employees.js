@@ -19,7 +19,17 @@
     stored on the object.
 */
 
-//CODE HERE
+class Employee {
+    constructor(name,shifts) {
+        this.name = name;
+        this.shifts = shifts;
+    }
+    getSchedule() {
+        console.log(this.name + ' works' + this.shifts)
+    }
+}
+
+
 
 
 
@@ -33,14 +43,15 @@
     shifts: weekday mornings, weekday afternoons
 */
 
-//CODE HERE
+let empOne= new Employee('Jess',' weekday mornings, weekday afternoons')
 
 /*
     Call the `getSchedule` method on the
     `empOne` object.
 */
 
-//CODE HERE
+empOne.getSchedule()
+
 
 
 /*
@@ -55,7 +66,10 @@
     dot or bracket notation.
 */
 
-//CODE HERE
+let empTwo = { ...empOne, 'nick' } 
+
+console.log(empTwo)
+
 
 
 

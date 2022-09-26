@@ -33,10 +33,11 @@ const cart = [
     }
 ]
 
-// 
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
 
+const summedPrice = cart.map(obj => obj.price).reduce((acc, curr) => { return acc + curr; }, 0 )
+
+console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -53,9 +54,25 @@ const cart = [
     decimals, for example: .06 for a 6% tax.
 */
 
-//CODE HERE
+
+// let cartTotal = 25.76;
+// let couponValue = 5;
+// let tax = .06;
 
 
+
+
+calcFinalPrice = (cartTotal, couponValue, tax) => {
+    let cartTax = cartTotal * tax
+   // console.log(cartTax)
+   let totalWTax = cartTotal + cartTax
+    // console.log(totalWTax)
+   let finalPrice = totalWTax - couponValue 
+  // console.log(finalPrice)
+   return finalPrice
+}
+
+console.log(calcFinalPrice(25.76,5,.06))
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -78,7 +95,13 @@ const cart = [
 */
 
 /*
-    TEXT ANSWER HERE
+
+Customer Object
+Name - string - 
+Birthday (send out free coupon on bday)- number (M/D/YYYY) example : 7281999
+email - string 
+Fav Food - string - send relevant coupon out on bday
+
 
 */
 
@@ -87,4 +110,10 @@ const cart = [
     guidelines.
 */
 
-//CODE HERE
+Customer1 = {
+    name: 'Dylan',
+    birthday: 7281999
+    email: 'dbc0728@gmail.com',
+    fav_food: 'Pasta'
+
+}
